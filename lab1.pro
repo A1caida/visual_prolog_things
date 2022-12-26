@@ -65,13 +65,19 @@ clauses
         fail.
 
 clauses
-    run() :-
-        % andrewgaimig().
+ run() :-
+        andrewgaimig(),
+        fail.
         %olgaandsashagaiming().
-        %footballandvoleyballgaiming().
-        voleyball_woman().
+    run() :-
+        footballandvoleyballgaiming(),
+        fail.
+    run() :-
+        voleyball_woman(). % вызываем "функцию"
         %voleyballgaimig().
-    run().
+    run() :-
+        succeed.
+        %run().
 
 end implement main
 
